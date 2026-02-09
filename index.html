@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Clínica Dental - Clínica dental de primer nivel que ofrece implantes, ortodoncia invisible y estética dental. Procedimientos indoloros y atención al paciente de 5 estrellas." />
+    <meta name="keywords" content="dentista, clínica dental, implantes, ortodoncia, carillas, blanqueamiento dental, odontología indolora, Beverly Hills" />
+    <meta name="author" content="Clínica Dental" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Clínica Dental | Tu Sonrisa, Diseñada con Precisión" />
+    <meta property="og:description" content="Experimenta el futuro de la odontología. Procedimientos indoloros, resultados en el mismo día y un ambiente tipo spa." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.clinicadental.com" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1200" />
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Clínica Dental | Odontología Premium" />
+    <meta name="twitter:description" content="Clínica dental de primer nivel ofreciendo implantes y estética dental avanzada." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1200" />
+
+    <link rel="canonical" href="https://www.clinicadental.com" />
+
+    <title>Clínica Dental</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dentist",
+      "name": "Clínica Dental",
+      "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09",
+      "@id": "https://www.clinicadental.com",
+      "url": "https://www.clinicadental.com",
+      "telephone": "+15551234567",
+      "priceRange": "$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Wellness Blvd, Suite 100",
+        "addressLocality": "Beverly Hills",
+        "addressRegion": "CA",
+        "postalCode": "90210",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 34.0736,
+        "longitude": -118.4004
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "19:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "15:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/clinicadental",
+        "https://www.instagram.com/clinicadental",
+        "https://twitter.com/clinicadental"
+      ]
+    }
+    </script>
+
+    <script>
+      // SHIM: Define process.env to prevent runtime crashes in browser environments
+      window.process = window.process || { env: { NODE_ENV: 'production' } };
+      
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              teal: {
+                900: '#0F4C5C',
+                800: '#156073',
+              },
+              terracotta: {
+                500: '#E29578',
+                600: '#CD7E61',
+              },
+              cloud: {
+                50: '#F8F9F8',
+              }
+            },
+            fontFamily: {
+              sans: ['Outfit', 'sans-serif'],
+            },
+            boxShadow: {
+              'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.15)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+      .glass-card-dark {
+        background: rgba(15, 76, 92, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .fade-in-section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        will-change: opacity, visibility;
+      }
+      .fade-in-section.is-visible {
+        opacity: 1;
+        transform: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "@google/genai": "https://esm.sh/@google/genai"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-cloud-50 text-slate-800 antialiased selection:bg-terracotta-500 selection:text-white">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
