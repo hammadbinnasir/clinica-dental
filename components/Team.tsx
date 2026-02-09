@@ -6,7 +6,7 @@ const TEAM_MEMBERS = [
     name: 'Dra. Sarah Mitchell',
     role: 'Implantóloga Principal',
     specialty: 'DDS, PhD en Prostodoncia',
-    image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=400&h=400',
+    image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=400&h=400',
   },
   {
     name: 'Dr. James Chen',
@@ -18,7 +18,7 @@ const TEAM_MEMBERS = [
     name: 'Dra. Elena Rodriguez',
     role: 'Dentista Estética',
     specialty: 'Miembro de la AACD',
-    image: 'https://images.unsplash.com/photo-1527613426441-4da17471b66d?auto=format&fit=crop&q=80&w=400&h=400',
+    image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=400&h=400',
   },
   {
     name: 'Dr. Michael Chang',
