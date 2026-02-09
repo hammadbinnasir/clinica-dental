@@ -30,7 +30,7 @@ Directrices de Comportamiento:
 export const ChatWidget: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { id: 'init', role: 'model', text: '¡Hola! 👋 Bienvenido a Clínica Dental. ¿En qué puedo ayudarte hoy?' }
+    { id: 'init', role: 'model', text: '¡Hola! 👋 Bienvenido a Clínica Dental. En qué puedo ayudarte hoy?' }
   ]);
   const [inputText, setInputText] = useState('');
   const [isTyping, setIsTyping] = useState(false);
@@ -71,25 +71,25 @@ export const ChatWidget: React.FC = () => {
 
     try {
       if (!chatSessionRef.current) {
-         // Fallback if API key missing or init failed
-         throw new Error("Chat no inicializado");
+        // Fallback if API key missing or init failed
+        throw new Error("Chat no inicializado");
       }
 
       const result = await chatSessionRef.current.sendMessage({ message: userMsg.text });
       const responseText = result.text;
 
-      const botMsg: Message = { 
-        id: (Date.now() + 1).toString(), 
-        role: 'model', 
-        text: responseText || "Lo siento, tuve un problema procesando tu respuesta." 
+      const botMsg: Message = {
+        id: (Date.now() + 1).toString(),
+        role: 'model',
+        text: responseText || "Lo siento, tuve un problema procesando tu respuesta."
       };
       setMessages(prev => [...prev, botMsg]);
     } catch (error) {
       console.error("Chat Error:", error);
-      setMessages(prev => [...prev, { 
-        id: Date.now().toString(), 
-        role: 'model', 
-        text: "Lo siento, ha ocurrido un error de conexión. Por favor llámanos directamente." 
+      setMessages(prev => [...prev, {
+        id: Date.now().toString(),
+        role: 'model',
+        text: "Lo siento, ha ocurrido un error de conexión. Por favor llámanos directamente."
       }]);
     } finally {
       setIsTyping(false);
@@ -101,19 +101,17 @@ export const ChatWidget: React.FC = () => {
       {/* Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`fixed z-50 right-4 bottom-20 md:bottom-8 p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 flex items-center justify-center ${
-          isOpen ? 'bg-slate-800 rotate-90' : 'bg-teal-900 hover:bg-terracotta-500'
-        } text-white`}
+        className={`fixed z-50 right-4 bottom-20 md:bottom-8 p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 flex items-center justify-center ${isOpen ? 'bg-slate-800 rotate-90' : 'bg-teal-900 hover:bg-terracotta-500'
+          } text-white`}
         aria-label="Abrir chat de asistencia"
       >
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
       </button>
 
       {/* Chat Window */}
-      <div className={`fixed z-50 right-4 bottom-36 md:bottom-24 w-[90vw] md:w-[400px] h-[500px] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 origin-bottom-right border border-slate-100 ${
-        isOpen ? 'scale-100 opacity-100 translate-y-0' : 'scale-90 opacity-0 translate-y-10 pointer-events-none'
-      }`}>
-        
+      <div className={`fixed z-50 right-4 bottom-36 md:bottom-24 w-[90vw] md:w-[400px] h-[500px] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 origin-bottom-right border border-slate-100 ${isOpen ? 'scale-100 opacity-100 translate-y-0' : 'scale-90 opacity-0 translate-y-10 pointer-events-none'
+        }`}>
+
         {/* Header */}
         <div className="bg-teal-900 p-4 flex items-center gap-3 shadow-md">
           <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center">
@@ -135,16 +133,14 @@ export const ChatWidget: React.FC = () => {
               key={msg.id}
               className={`flex items-start gap-2 ${msg.role === 'user' ? 'flex-row-reverse' : 'flex-row'}`}
             >
-              <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
-                msg.role === 'user' ? 'bg-terracotta-100 text-terracotta-600' : 'bg-teal-100 text-teal-800'
-              }`}>
+              <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${msg.role === 'user' ? 'bg-terracotta-100 text-terracotta-600' : 'bg-teal-100 text-teal-800'
+                }`}>
                 {msg.role === 'user' ? <User className="w-5 h-5" /> : <Bot className="w-5 h-5" />}
               </div>
-              <div className={`max-w-[80%] p-3 rounded-2xl text-sm leading-relaxed shadow-sm ${
-                msg.role === 'user' 
-                  ? 'bg-terracotta-500 text-white rounded-tr-none' 
+              <div className={`max-w-[80%] p-3 rounded-2xl text-sm leading-relaxed shadow-sm ${msg.role === 'user'
+                  ? 'bg-terracotta-500 text-white rounded-tr-none'
                   : 'bg-white text-slate-700 rounded-tl-none border border-slate-100'
-              }`}>
+                }`}>
                 {msg.text}
               </div>
             </div>

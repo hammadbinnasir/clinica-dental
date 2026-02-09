@@ -138,7 +138,7 @@ export const ContactForm: React.FC = () => {
           <div className="md:w-5/12 p-8 md:p-12 text-white relative overflow-hidden group">
             <div className="absolute inset-0 bg-terracotta-500/10 z-0 transition-transform duration-1000 group-hover:scale-105"></div>
             <div className="relative z-10">
-              <h2 className="text-3xl font-bold mb-6">¿Listo para tu <br />nueva sonrisa?</h2>
+              <h2 className="text-3xl font-bold mb-6">Listo para tu <br />nueva sonrisa?</h2>
               <p className="text-teal-100 mb-8 leading-relaxed">
                 Reserva tu consulta gratuita hoy. Nuestro equipo te guiará en cada paso del proceso.
               </p>
@@ -182,8 +182,8 @@ export const ContactForm: React.FC = () => {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       className={`w-full px-4 py-3 rounded-xl bg-slate-50 border outline-none transition-all focus:-translate-y-1 focus:shadow-lg ${touched.name && errors.name
-                          ? 'border-red-500 focus:border-red-500 focus:ring-1 focus:ring-red-500'
-                          : 'border-slate-200 focus:border-teal-900 focus:ring-1 focus:ring-teal-900'
+                        ? 'border-red-500 focus:border-red-500 focus:ring-1 focus:ring-red-500'
+                        : 'border-slate-200 focus:border-teal-900 focus:ring-1 focus:ring-teal-900'
                         }`}
                       placeholder="Juan Pérez"
                     />
@@ -212,8 +212,8 @@ export const ContactForm: React.FC = () => {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       className={`w-full px-4 py-3 rounded-xl bg-slate-50 border outline-none transition-all focus:-translate-y-1 focus:shadow-lg ${touched.email && errors.email
-                          ? 'border-red-500 focus:border-red-500 focus:ring-1 focus:ring-red-500'
-                          : 'border-slate-200 focus:border-teal-900 focus:ring-1 focus:ring-teal-900'
+                        ? 'border-red-500 focus:border-red-500 focus:ring-1 focus:ring-red-500'
+                        : 'border-slate-200 focus:border-teal-900 focus:ring-1 focus:ring-teal-900'
                         }`}
                       placeholder="ejemplo@correo.com"
                     />
@@ -242,8 +242,8 @@ export const ContactForm: React.FC = () => {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       className={`w-full px-4 py-3 rounded-xl bg-slate-50 border outline-none transition-all focus:-translate-y-1 focus:shadow-lg ${touched.phone && errors.phone
-                          ? 'border-red-500 focus:border-red-500 focus:ring-1 focus:ring-red-500'
-                          : 'border-slate-200 focus:border-teal-900 focus:ring-1 focus:ring-teal-900'
+                        ? 'border-red-500 focus:border-red-500 focus:ring-1 focus:ring-red-500'
+                        : 'border-slate-200 focus:border-teal-900 focus:ring-1 focus:ring-teal-900'
                         }`}
                       placeholder="(555) 000-0000"
                     />
@@ -285,8 +285,8 @@ export const ContactForm: React.FC = () => {
                 <label className="text-sm font-semibold text-slate-700 block">Método de Contacto Preferido</label>
                 <div className="grid grid-cols-2 gap-4">
                   <label className={`flex items-center justify-center gap-2 p-3 rounded-xl border cursor-pointer transition-all group ${formData.contact === ContactMethod.WHATSAPP
-                      ? 'bg-teal-50 border-teal-900 text-teal-900 shadow-sm'
-                      : 'border-slate-200 hover:bg-slate-50 hover:border-teal-900'
+                    ? 'bg-teal-50 border-teal-900 text-teal-900 shadow-sm'
+                    : 'border-slate-200 hover:bg-slate-50 hover:border-teal-900'
                     }`}>
                     <input
                       type="radio"
@@ -299,8 +299,8 @@ export const ContactForm: React.FC = () => {
                     <span className="font-medium group-hover:scale-105 transition-transform">WhatsApp</span>
                   </label>
                   <label className={`flex items-center justify-center gap-2 p-3 rounded-xl border cursor-pointer transition-all group ${formData.contact === ContactMethod.CALL
-                      ? 'bg-teal-50 border-teal-900 text-teal-900 shadow-sm'
-                      : 'border-slate-200 hover:bg-slate-50 hover:border-teal-900'
+                    ? 'bg-teal-50 border-teal-900 text-teal-900 shadow-sm'
+                    : 'border-slate-200 hover:bg-slate-50 hover:border-teal-900'
                     }`}>
                     <input
                       type="radio"

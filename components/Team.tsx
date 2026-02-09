@@ -6,25 +6,25 @@ const TEAM_MEMBERS = [
     name: 'Dra. Sarah Mitchell',
     role: 'Implantóloga Principal',
     specialty: 'DDS, PhD en Prostodoncia',
-    image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=400&h=400',
+    image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=400&h=400',
   },
   {
     name: 'Dr. James Chen',
     role: 'Especialista en Ortodoncia',
     specialty: 'Proveedor Platinum Invisalign®',
-    image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=400&h=400',
+    image: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=400&h=400',
   },
   {
     name: 'Dra. Elena Rodriguez',
     role: 'Dentista Estética',
     specialty: 'Miembro de la AACD',
-    image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=400&h=400',
+    image: 'https://images.unsplash.com/photo-1527613426441-4da17471b66d?auto=format&fit=crop&q=80&w=400&h=400',
   },
   {
     name: 'Dr. Michael Chang',
     role: 'Periodoncista',
     specialty: 'Experto en Salud de las Encías',
-    image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=400&h=400',
+    image: 'https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&q=80&w=400&h=400',
   },
 ];
 
@@ -43,9 +43,9 @@ export const Team: React.FC = () => {
           {TEAM_MEMBERS.map((member, idx) => (
             <div key={idx} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
               <div className="relative overflow-hidden aspect-square">
-                <img 
-                  src={member.image} 
-                  alt={`${member.name} - ${member.role} en Clínica Dental`} 
+                <img
+                  src={member.image}
+                  alt={`${member.name} - ${member.role} en Clínica Dental`}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   loading="lazy"
                 />

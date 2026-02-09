@@ -58,19 +58,19 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const FAQS: FAQItem[] = [
   {
-    question: "¿Cuánto dura el procedimiento de implante dental?",
+    question: "Cuánto dura el procedimiento de implante dental?",
     answer: "La mayoría de las colocaciones de implantes toman menos de una hora por diente. Utilizamos tecnología de guía 3D avanzada para garantizar precisión y rapidez, minimizando tu tiempo en el sillón."
   },
   {
-    question: "¿Es doloroso el tratamiento de ortodoncia invisible?",
+    question: "Es doloroso el tratamiento de ortodoncia invisible?",
     answer: "La mayoría de los pacientes experimentan una presión menor durante el primer día de una nueva férula, pero generalmente es indoloro. Es significativamente más cómodo que los brackets metálicos tradicionales."
   },
   {
-    question: "¿Ofrecen opciones de financiación?",
+    question: "Ofrecen opciones de financiación?",
     answer: "Sí, creemos que la atención premium debe ser accesible. Ofrecemos planes de financiación sin intereses para tratamientos superiores a $1,000. Consulta en recepción para más detalles."
   },
   {
-    question: "¿Qué protocolos de seguridad siguen?",
+    question: "Qué protocolos de seguridad siguen?",
     answer: "Nos adherimos a estrictos protocolos de esterilización de grado hospitalario. Nuestros sistemas de filtración de aire renuevan el aire de la clínica cada 10 minutos para garantizar un entorno seguro."
   }
 ];
